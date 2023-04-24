@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="col-md-6 offset-md-3">
+
+
+<br/><br/><br/>
+
+	
+
+	<form method="POST" action="{% url 'add_task'%}">
+
+		{% csrf_token %}
+
+    <h3>Add New Task</h3>
+
+		{{  form.as_p }}
+		
+    <div class="col-sm-10">
+         <button type="submit" class="btn btn-secondary btn-lg">Add Task</button>
+      </div>
+
+	</form>
+	</div>	
+
+{% endblock %}
